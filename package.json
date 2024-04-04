@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "npx react-native run-ios --simulator=\"iPhone 15 Pro (17.4)\"",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.73.6"
+    "react-native": "0.73.6",
+    "react-native-backgroud": "link:./modules/backgroud"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
