@@ -10,7 +10,7 @@ function App(): React.JSX.Element {
       <NeuHintergrundView
         style={styles.container}
         color="#f1f1f1"
-        blurType="systemUltraThinMaterialLight"
+        blurType="systemUltraThickMaterialLight"
       />
     </View>
   );
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backgroundStyle: {
-    backgroundColor: 'red',
+    backgroundColor: 'blue',
     flex: 1,
   },
 });
