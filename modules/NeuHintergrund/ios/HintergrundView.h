@@ -8,10 +8,10 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-
 @interface HintergrundView : UIView
 
 - (void)setTextColor:(UIColor *)color;
+- (void)setBlurType:(UIBlurEffectStyle)blurEffect;
 
 @end
 

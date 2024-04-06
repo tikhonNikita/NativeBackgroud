@@ -7,8 +7,6 @@
 
 #import "HintergrundView.h"
 
-#import "HintergrundView.h"
-
 @interface HintergrundView ()
 
 @property (strong, nonatomic) UILabel *label;
@@ -45,7 +43,7 @@
     _labelContainerView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_labelContainerView];
     
-    _labelBlurEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleSystemChromeMaterial]];
+    _labelBlurEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
     _labelBlurEffectView.translatesAutoresizingMaskIntoConstraints = NO;
     [_labelContainerView addSubview:_labelBlurEffectView];
     
@@ -99,6 +97,12 @@
 
 - (void)setTextColor:(UIColor *)color {
     _label.textColor = color;
+}
+
+
+- (void)setBlurType:(UIBlurEffectStyle)blurEffect {
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle: blurEffect];
+    _backgroundBlurEffectView.effect = effect;
 }
 
 @end

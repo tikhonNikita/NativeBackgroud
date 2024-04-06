@@ -15,5 +15,6 @@ RCT_EXPORT_MODULE(NeuHintergrundView)
 }
 
 RCT_EXPORT_VIEW_PROPERTY(color, NSString)
+RCT_EXPORT_VIEW_PROPERTY(blurType, NSString)
 
 @end

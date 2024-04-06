@@ -1,22 +1,27 @@
 import {NeuHintergrundView} from 'neu-hintergrund';
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
-
+import {View, StyleSheet} from 'react-native';
+//systemThickMaterialLight
+//systemChromeMaterialLight
+//systemUltraThinMaterialDark
 function App(): React.JSX.Element {
-  const backgroundStyle = {
-    backgroundColor: 'red',
-    flex: 1,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <NeuHintergrundView style={styles.container} color="#f1f1a6" />
-    </SafeAreaView>
+    <View style={styles.backgroundStyle}>
+      <NeuHintergrundView
+        style={styles.container}
+        color="#e1f1a6"
+        blurType="systemChromeMaterialLight"
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  backgroundStyle: {
+    backgroundColor: 'red',
     flex: 1,
   },
 });
