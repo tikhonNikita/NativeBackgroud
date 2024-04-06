@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "npx react-native run-ios --simulator=\"iPhone 15 Pro (17.4)\"",
+    "podnewarch": "cd ios; RCT_NEW_ARCH_ENABLED=1 bundle exec pod install",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
@@ -12,7 +13,8 @@
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.73.6",
-    "react-native-backgroud": "link:./modules/backgroud"
+    "react-native-backgroud": "link:./modules/backgroud",
+    "neu-hintergrund": "link:./modules/NeuHintergrund"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

@@ -1,0 +1,14 @@
+{
+  "name": "neu-hintergrund",
+  "version": "0.0.0",
+  "description": "mine",
+  "main": "src/index",
+  "codegenConfig": {
+    "name": "RNNeuHintergrundViewSpec",
+    "type": "components",
+    "jsSrcsDir": "src"
+  },
+  "author": " <> ()",
+  "license": "UNLICENSED",
+  "homepage": "#readme"
+}
