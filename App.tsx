@@ -9,8 +9,8 @@ function App(): React.JSX.Element {
     <View style={styles.backgroundStyle}>
       <NeuHintergrundView
         style={styles.container}
-        color="#e1f1a6"
-        blurType="systemChromeMaterialLight"
+        color="#f1f1f1"
+        blurType="systemUltraThinMaterialLight"
       />
     </View>
   );

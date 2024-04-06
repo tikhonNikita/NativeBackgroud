@@ -8,12 +8,6 @@
 @implementation NeuHintergrundViewManager
 
 RCT_EXPORT_MODULE(NeuHintergrundView)
-
-- (UIView *)view
-{
-  return [[UIView alloc] init];
-}
-
 RCT_EXPORT_VIEW_PROPERTY(color, NSString)
 RCT_EXPORT_VIEW_PROPERTY(blurType, NSString)
 
