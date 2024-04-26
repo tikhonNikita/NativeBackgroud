@@ -1,28 +1,38 @@
 import {NeuHintergrundView} from 'neu-hintergrund';
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-//systemThickMaterialLight
-//systemChromeMaterialLight
-//systemUltraThinMaterialDark
+import {StyleSheet, Text, ImageBackground} from 'react-native';
+
+const image = require('./res/images/city.jpg');
+
 function App(): React.JSX.Element {
   return (
-    <View style={styles.backgroundStyle}>
+    <ImageBackground
+      style={styles.backgroundStyle}
+      source={image}
+      imageStyle={{
+        width: '100%',
+        height: '100%',
+      }}>
       <NeuHintergrundView
         style={styles.container}
         color="#f1f1f1"
-        blurType="systemUltraThickMaterialLight"
-      />
-    </View>
+        blurType="systemUltraThickMaterialLight">
+        <Text>NeuHintergrundView</Text>
+      </NeuHintergrundView>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   backgroundStyle: {
-    backgroundColor: 'blue',
     flex: 1,
+    backgroundColor: 'green',
   },
 });
+
 export default App;
