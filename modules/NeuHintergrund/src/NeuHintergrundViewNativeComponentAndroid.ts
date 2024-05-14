@@ -4,10 +4,12 @@ import {Float} from 'react-native/Libraries/Types/CodegenTypes';
 
 interface NativeProps extends ViewProps {
   color?: string;
-  blurType: string;
   blurRadius: Float;
 }
 
-export default codegenNativeComponent<NativeProps>('NeuHintergrundView', {
-  excludedPlatforms: ['android'],
-});
+export default codegenNativeComponent<NativeProps>(
+  'AndroidNeuHintergrundView',
+  {
+    excludedPlatforms: ['iOS'],
+  },
+);
