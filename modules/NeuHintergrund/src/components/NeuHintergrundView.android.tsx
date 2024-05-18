@@ -5,10 +5,11 @@ import type {ColorValue} from 'react-native';
 
 import React from 'react';
 import {NeuHintergrundViewNativeAndroid} from '../nativeViews';
+import {AndroidBlurRadius} from './types.ts';
 
 export type NeuHintergrundViewProps = ViewProps & {
   color: ColorValue;
-  blurRadius?: number;
+  blurRadius?: AndroidBlurRadius;
 };
 
 export const NeuHintergrundView: FC<NeuHintergrundViewProps> = ({
@@ -19,7 +20,7 @@ export const NeuHintergrundView: FC<NeuHintergrundViewProps> = ({
   return (
     <NeuHintergrundViewNativeAndroid
       {...rest}
-      blurRadius={Math.max(1, blurRadius)}
+      blurRadius={Math.min(25, Math.max(1, blurRadius))}
       color={color}
     />
   );
