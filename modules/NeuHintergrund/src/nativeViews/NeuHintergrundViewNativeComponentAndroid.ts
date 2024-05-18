@@ -5,6 +5,7 @@ import {Float} from 'react-native/Libraries/Types/CodegenTypes';
 interface NativeProps extends ViewProps {
   color: ColorValue;
   blurRadius: Float;
+  enabled: boolean;
 }
 
 export default codegenNativeComponent<NativeProps>(

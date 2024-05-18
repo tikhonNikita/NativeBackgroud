@@ -10,6 +10,7 @@ import {AndroidBlurRadius} from './types.ts';
 export type NeuHintergrundViewProps = ViewProps & {
   color: ColorValue;
   blurRadius?: AndroidBlurRadius;
+  enabled: boolean;
 };
 
 export const NeuHintergrundView: FC<NeuHintergrundViewProps> = ({

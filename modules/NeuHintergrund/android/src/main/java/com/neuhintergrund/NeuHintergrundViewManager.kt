@@ -84,6 +84,15 @@ class NeuHintergrundViewManager : SimpleViewManager<BlurView>(),
         view.invalidate()
     }
 
+    override fun setEnabled(view: BlurView?, value: Boolean) {
+        if (view == null) {
+            Log.e("NeuHintergrundViewManager", "setEnabled: View is null")
+            return
+        }
+        view.setBlurEnabled(value)
+        view.invalidate()
+    }
+
 
     fun getBlurAlgorithm(ctx: ThemedReactContext): BlurAlgorithm {
         val algorithm: BlurAlgorithm = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
