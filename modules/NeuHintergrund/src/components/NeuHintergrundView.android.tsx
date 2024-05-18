@@ -1,11 +1,13 @@
 import {FC} from 'react';
 import {ViewProps} from 'react-native';
 
-import {default as NeuHintergrundViewNative} from '../NeuHintergrundViewNativeComponentAndroid';
+import type {ColorValue} from 'react-native';
+
 import React from 'react';
+import {NeuHintergrundViewNativeAndroid} from '../nativeViews';
 
 export type NeuHintergrundViewProps = ViewProps & {
-  color: string;
+  color: ColorValue;
   blurRadius?: number;
 };
 
@@ -15,7 +17,7 @@ export const NeuHintergrundView: FC<NeuHintergrundViewProps> = ({
   ...rest
 }) => {
   return (
-    <NeuHintergrundViewNative
+    <NeuHintergrundViewNativeAndroid
       {...rest}
       blurRadius={Math.max(1, blurRadius)}
       color={color}

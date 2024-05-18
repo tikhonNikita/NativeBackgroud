@@ -3,16 +3,18 @@ import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 
 const image = require('./res/images/city.jpg');
-//TODO: restore after invalid
-//TODO: turn off blur
+const color = 'rgba(200,100,21,0.22)';
+//TODO: Turn off blur
+//TODO: Validate border radius
+//TODO: Downsampling factor
 function App(): React.JSX.Element {
   return (
     <View style={styles.backgroundStyle}>
       <Image source={image} style={StyleSheet.absoluteFill} />
       <NeuHintergrund
-        color="#1a2fafbb" //TODO: restore after invalid
+        color={color}
         style={StyleSheet.absoluteFill}
-        blurRadius={5}
+        blurRadius={12}
       />
       <Text>Background</Text>
     </View>
@@ -25,6 +27,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'green',
+    opacity: 1,
   },
   backgroundStyle: {
     flex: 1,

@@ -1,7 +1,7 @@
-import {default as NeuHintergrundViewNative} from '../NeuHintergrundViewNativeComponent';
 import React from 'react';
 import {FC} from 'react';
 import {ViewProps} from 'react-native';
+import {NeuHintergrundViewNativeIOS} from '../nativeViews';
 
 export type NeuHintergrundViewProps = ViewProps & {
   color: string;
@@ -15,7 +15,7 @@ export const NeuHintergrundView: FC<NeuHintergrundViewProps> = ({
   blurType = 'light',
 }) => {
   return (
-    <NeuHintergrundViewNative
+    <NeuHintergrundViewNativeIOS
       blurRadius={blurRadius}
       color={color}
       blurType={blurType}

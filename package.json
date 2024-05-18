@@ -11,9 +11,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "neu-hintergrund": "link:./modules/NeuHintergrund",
     "react": "18.2.0",
-    "react-native": "^0.74.0",
-    "neu-hintergrund": "link:./modules/NeuHintergrund"
+    "react-native": "^0.74.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

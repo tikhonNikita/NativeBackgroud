@@ -1,7 +1,6 @@
-import {NeuHintergrundView} from './components/NeuHintergrundView';
+import {NeuHintergrundView} from './components';
 import type {NeuHintergrundViewProps as NeuHintergrundPropsIOS} from './components/NeuHintergrundView.ios';
 import type {NeuHintergrundViewProps as NeuHintergrundPropsAndroid} from './components/NeuHintergrundView.android';
-export * from './NeuHintergrundViewNativeComponent';
 
 type NeuHintergrundProps = NeuHintergrundPropsIOS | NeuHintergrundPropsAndroid;
 const NeuHintergrund =
