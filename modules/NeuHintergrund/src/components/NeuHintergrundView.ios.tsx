@@ -13,12 +13,14 @@ export const NeuHintergrundView: FC<NeuHintergrundViewProps> = ({
   color,
   blurRadius = 1,
   blurType = 'light',
+  ...rest
 }) => {
   return (
     <NeuHintergrundViewNativeIOS
       blurRadius={blurRadius}
       color={color}
       blurType={blurType}
+      {...rest}
     />
   );
 };

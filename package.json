@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "npx react-native run-ios --simulator=\"iPhone 15 Pro (17.4)\"",
+    "ios": "npx react-native run-ios",
     "podnewarch": "cd ios; RCT_NEW_ARCH_ENABLED=1 bundle exec pod install",
     "lint": "eslint .",
     "start": "react-native start",

@@ -1,36 +1,22 @@
 import {NeuHintergrund} from 'neu-hintergrund';
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 
+//TODO: Add blur ammount
+//TODO: upgrade RN
 const image = require('./res/images/city.jpg');
 const color = 'rgba(200,100,21,0.22)';
-
 function App(): React.JSX.Element {
   return (
     <View style={styles.backgroundStyle}>
-      <Image source={image} style={StyleSheet.absoluteFill} />
-      <NeuHintergrund
-        style={StyleSheet.absoluteFill}
-        color={color}
-        blurRadius={20}
-        enabled={true}
-      />
-      <View
-        style={{
-          backgroundColor: 'white',
-          alignItems: 'center',
-          justifyContent: 'center',
-          alignSelf: 'center',
-          padding: 10,
-        }}>
-        <Text>Background</Text>
-        <NeuHintergrund
-          style={StyleSheet.absoluteFill}
-          color={'rgba(20,6,236,0.37)'}
-          blurRadius={1}
-          enabled={true}
+      <NeuHintergrund blurType="light" color={color} enabled={true}>
+        <Image
+          source={image}
+          style={{
+            flex: 1,
+          }}
         />
-      </View>
+      </NeuHintergrund>
     </View>
   );
 }

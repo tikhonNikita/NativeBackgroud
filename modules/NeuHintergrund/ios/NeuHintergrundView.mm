@@ -49,8 +49,6 @@ using namespace facebook::react;
         NSString *blurString = [[NSString alloc] initWithUTF8String:newViewProps.blurType.c_str()];
         UIBlurEffectStyle backgroundEffect = [self backgroundStringToBlurType:blurString];
         
-        NSLog(@"%@", colorToConvert);
-        [_view setTextColor:[self hexStringToColor:colorToConvert]];
         [_view setBlurType:backgroundEffect];
     }
     
