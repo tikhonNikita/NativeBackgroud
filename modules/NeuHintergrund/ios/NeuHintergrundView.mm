@@ -7,6 +7,7 @@
 
 #import "RCTFabricComponentsPlugins.h"
 #import "HintergrundView.h"
+#import "UIColor+ColorFromString.h"
 
 using namespace facebook::react;
 
@@ -41,15 +42,13 @@ using namespace facebook::react;
 {
     const auto &oldViewProps = *std::static_pointer_cast<NeuHintergrundViewProps const>(_props);
     const auto &newViewProps = *std::static_pointer_cast<NeuHintergrundViewProps const>(props);
-    NSString *blurString = [[NSString alloc] initWithUTF8String:newViewProps.blurType.c_str()];
     
     if (oldViewProps.color != newViewProps.color) {
         NSString *colorToConvert = [[NSString alloc] initWithUTF8String:newViewProps.color.c_str()];
         
-        NSString *blurString = [[NSString alloc] initWithUTF8String:newViewProps.blurType.c_str()];
-        UIBlurEffectStyle backgroundEffect = [self backgroundStringToBlurType:blurString];
+        UIColor *color = [UIColor colorWithRGBAString:colorToConvert];
         
-        [_view setBlurType:backgroundEffect];
+        [_view setBlurColor:color];
     }
     
     

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setBlurType:(UIBlurEffectStyle)blurEffect;
 - (void)setBlurAmount:(NSNumber*)blurAmount;
+- (void)setBlurColor:(UIColor*)blurColor;
 
 @end
 

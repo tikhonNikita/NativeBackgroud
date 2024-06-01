@@ -58,4 +58,8 @@
     
 }
 
+- (void)setBlurColor:(nonnull UIColor *)blurColor {
+    self.backgroundColor = blurColor;
+}
+
 @end

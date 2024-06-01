@@ -5,7 +5,7 @@ import {Image, StyleSheet, View} from 'react-native';
 //TODO: Add blur ammount
 //TODO: upgrade RN
 const image = require('./res/images/city.jpg');
-const color = 'rgba(200,100,21,0.22)';
+const color = 'rgba(100,200,21,0.1)';
 function App(): React.JSX.Element {
   return (
     <View style={styles.backgroundStyle}>
