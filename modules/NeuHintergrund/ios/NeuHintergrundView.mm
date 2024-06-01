@@ -60,6 +60,11 @@ using namespace facebook::react;
         [_view setBlurType:backgroundEffect];
     }
     
+    if (oldViewProps.blurRadius != newViewProps.blurRadius) {
+        NSNumber *blurRadius = [NSNumber numberWithLong:newViewProps.blurRadius];
+        [_view setBlurAmount:blurRadius];
+    }
+    
     
     [super updateProps:props oldProps:oldProps];
 }

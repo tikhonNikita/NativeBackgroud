@@ -47,19 +47,19 @@ NS_ASSUME_NONNULL_BEGIN
     trimmedString = [trimmedString stringByReplacingOccurrencesOfString:@"rgba(" withString:@""];
     trimmedString = [trimmedString stringByReplacingOccurrencesOfString:@")" withString:@""];
     
-    // Separate the components by commas
+    
     NSArray<NSString *> *components = [trimmedString componentsSeparatedByString:@","];
     if (components.count != 4) {
-        return nil; // Invalid format
+        return nil;
     }
     
-    // Convert the string components to CGFloat values
+    
     CGFloat red = [components[0] floatValue] / 255.0;
     CGFloat green = [components[1] floatValue] / 255.0;
     CGFloat blue = [components[2] floatValue] / 255.0;
     CGFloat alpha = [components[3] floatValue];
     
-    // Create and return the UIColor object
+    
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 

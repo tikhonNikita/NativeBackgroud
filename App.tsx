@@ -9,7 +9,7 @@ const color = 'rgba(100,200,21,0.1)';
 function App(): React.JSX.Element {
   return (
     <View style={styles.backgroundStyle}>
-      <NeuHintergrund blurType="light" color={color} enabled={true}>
+      <NeuHintergrund blurType="light" color={color} blurRadius={10}>
         <Image
           source={image}
           style={{

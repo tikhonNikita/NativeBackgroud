@@ -50,12 +50,14 @@
 }
 
 - (void)setBlurType:(UIBlurEffectStyle)blurEffect {
-    BlurWithRadius *effect = [BlurWithRadius effectWithStyle:blurEffect  andBlurAmount: @10];
+    BlurWithRadius *effect = [BlurWithRadius effectWithStyle:blurEffect andBlurAmount: @10];
     _backgroundBlurEffectView.effect = effect;
 }
 
 - (void)setBlurAmount:(nonnull NSNumber *)blurAmount {
-    
+    BlurWithRadius *effect = [BlurWithRadius effectWithStyle:UIBlurEffectStyleSystemMaterialLight andBlurAmount: blurAmount];
+    _backgroundBlurEffectView.effect = nil;
+    _backgroundBlurEffectView.effect = [effect copyWithBlurAmount:blurAmount];
 }
 
 - (void)setBlurColor:(nonnull UIColor *)blurColor {

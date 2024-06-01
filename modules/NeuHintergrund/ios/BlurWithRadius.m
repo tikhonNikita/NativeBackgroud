@@ -18,13 +18,26 @@
 
 - (id)effectSettings {
     id settings = [super effectSettings];
-      if (settings) {
-          [settings setValue:@50 forKey:@"blurRadius"];
+      if (settings && _blurAmount) {
+          [settings setValue:_blurAmount forKey:@"blurRadius"];
       } else {
           NSLog(@"settings is nil");
       }
     return settings;
 }
 
-@end
+- (instancetype)copyWithBlurAmount:(NSNumber *)blurAmount {
+    BlurWithRadius *copy = [[self class] effectWithStyle:[self style] andBlurAmount:blurAmount];
+    return copy;
+}
 
+- (UIBlurEffectStyle)style {
+    id settings = [self effectSettings];
+    if (settings) {
+        NSNumber *styleValue = [settings valueForKey:@"style"];
+        return (UIBlurEffectStyle)[styleValue integerValue];
+    }
+    return UIBlurEffectStyleLight;
+}
+
+@end
