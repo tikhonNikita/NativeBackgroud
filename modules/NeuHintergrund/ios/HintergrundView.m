@@ -6,7 +6,7 @@
 //
 
 #import "HintergrundView.h"
-#import "BlurWithRadius.m"
+#import "BlurWithRadius.h"
 
 @interface HintergrundView ()
 
@@ -50,8 +50,12 @@
 }
 
 - (void)setBlurType:(UIBlurEffectStyle)blurEffect {
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle: blurEffect];
+    BlurWithRadius *effect = [BlurWithRadius effectWithStyle:blurEffect  andBlurAmount: @10];
     _backgroundBlurEffectView.effect = effect;
+}
+
+- (void)setBlurAmount:(nonnull NSNumber *)blurAmount {
+    
 }
 
 @end

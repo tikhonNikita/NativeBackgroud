@@ -11,7 +11,7 @@
 
 @property (nonatomic, strong) NSNumber *blurAmount;
 
-+ (instancetype)effectWithStyle:(UIBlurEffectStyle)style blurAmount:(NSNumber *)blurAmount;
++ (instancetype)effectWithStyle:(UIBlurEffectStyle)style andBlurAmount:(NSNumber*)blurAmount;
 
 @end
 
