@@ -11,6 +11,9 @@
 @interface HintergrundView ()
 
 @property (strong, nonatomic) UIVisualEffectView *backgroundBlurEffectView;
+@property (strong, nonatomic, nullable) BlurWithRadius *blurEffect;
+@property (nonatomic) BOOL blurEnabled;
+
 
 @end
 
@@ -33,7 +36,8 @@
 }
 
 - (void)setupView {
-    _backgroundBlurEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
+    _backgroundBlurEffectView = [[UIVisualEffectView alloc] initWithEffect:nil];
+    _blurEnabled = NO;
     _backgroundBlurEffectView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_backgroundBlurEffectView];
     
@@ -51,17 +55,32 @@
 
 - (void)setBlurType:(UIBlurEffectStyle)blurEffect {
     BlurWithRadius *effect = [BlurWithRadius effectWithStyle:blurEffect andBlurAmount: @10];
-    _backgroundBlurEffectView.effect = effect;
+    _blurEffect = effect;
+    if (_blurEnabled) {
+        _backgroundBlurEffectView.effect = effect;
+    }
 }
 
 - (void)setBlurAmount:(nonnull NSNumber *)blurAmount {
-    BlurWithRadius *effect = [BlurWithRadius effectWithStyle:UIBlurEffectStyleSystemMaterialLight andBlurAmount: blurAmount];
+    BlurWithRadius *effect = [(BlurWithRadius *)_blurEffect copyWithBlurAmount:blurAmount];
     _backgroundBlurEffectView.effect = nil;
-    _backgroundBlurEffectView.effect = [effect copyWithBlurAmount:blurAmount];
+    _blurEffect = effect;
+    if (_blurEnabled) {
+        _backgroundBlurEffectView.effect = effect;
+    }
 }
 
 - (void)setBlurColor:(nonnull UIColor *)blurColor {
     self.backgroundColor = blurColor;
+}
+
+- (void)setBlurEnabled:(BOOL)enabled {
+    _blurEnabled = enabled;
+    if(_blurEnabled) {
+        _backgroundBlurEffectView.effect = _blurEffect;
+        return;
+    }
+    _backgroundBlurEffectView.effect = nil;
 }
 
 @end

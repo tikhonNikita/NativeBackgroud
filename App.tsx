@@ -2,14 +2,19 @@ import {NeuHintergrund} from 'neu-hintergrund';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 
-//TODO: Add blur ammount
 //TODO: upgrade RN
+//TODO: fix issue with changing blurAmount breaks default styles
+//TODO: unify interface
 const image = require('./res/images/city.jpg');
-const color = 'rgba(100,200,21,0.1)';
+const color = 'rgba(12,21,4,0.0)';
 function App(): React.JSX.Element {
   return (
     <View style={styles.backgroundStyle}>
-      <NeuHintergrund blurType="light" color={color} blurRadius={10}>
+      <NeuHintergrund
+        enabled={true}
+        blurType="dark"
+        color={color}
+        blurRadius={20}>
         <Image
           source={image}
           style={{

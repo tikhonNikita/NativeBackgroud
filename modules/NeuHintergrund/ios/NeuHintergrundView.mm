@@ -30,7 +30,7 @@ using namespace facebook::react;
         static const auto defaultProps = std::make_shared<const NeuHintergrundViewProps>();
         _props = defaultProps;
         
-        _view = [[HintergrundView alloc] init];
+        _view = [[HintergrundView alloc] initWithFrame:frame];
         
         self.contentView = _view;
     }
@@ -38,10 +38,18 @@ using namespace facebook::react;
     return self;
 }
 
+
+
 - (void)updateProps:(Props::Shared const &)props oldProps:(Props::Shared const &)oldProps
 {
     const auto &oldViewProps = *std::static_pointer_cast<NeuHintergrundViewProps const>(_props);
     const auto &newViewProps = *std::static_pointer_cast<NeuHintergrundViewProps const>(props);
+    
+    if (oldViewProps.enabled != newViewProps.enabled) {
+        BOOL enabled = (BOOL)newViewProps.enabled;
+        NSLog(@"Objective-C BOOL: %@", enabled ? @"YES" : @"NO");
+        [_view setBlurEnabled:enabled];
+    }
     
     if (oldViewProps.color != newViewProps.color) {
         NSString *colorToConvert = [[NSString alloc] initWithUTF8String:newViewProps.color.c_str()];
@@ -56,7 +64,6 @@ using namespace facebook::react;
         NSString *blurString = [[NSString alloc] initWithUTF8String:newViewProps.blurType.c_str()];
         UIBlurEffectStyle backgroundEffect = [self backgroundStringToBlurType:blurString];
         
-        NSLog(@"%@", blurString);
         [_view setBlurType:backgroundEffect];
     }
     

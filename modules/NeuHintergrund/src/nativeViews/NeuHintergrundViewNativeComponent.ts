@@ -6,6 +6,7 @@ interface NativeProps extends ViewProps {
   color?: string;
   blurType: string;
   blurRadius: Float;
+  enabled: boolean;
 }
 
 export default codegenNativeComponent<NativeProps>('NeuHintergrundView', {
