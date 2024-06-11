@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		17DDD2F86A7A354263C0F616 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E2DCC415CEC0FA184CF0B160 /* PrivacyInfo.xcprivacy */; };
 		31CAA0332BBDAFFD00637233 /* BackgroudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CAA0322BBDAFFD00637233 /* BackgroudView.swift */; };
 		7C63BEB4C5290276AB310A93 /* libPods-NativeBackground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FE62A2EFDE24ABF2050EF9 /* libPods-NativeBackground.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 		AC9627C404383FFD8F9597EC /* Pods-NativeBackground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeBackground.release.xcconfig"; path = "Target Support Files/Pods-NativeBackground/Pods-NativeBackground.release.xcconfig"; sourceTree = "<group>"; };
 		B0FE62A2EFDE24ABF2050EF9 /* libPods-NativeBackground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeBackground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B951FCA81EDAD191A0F3F85C /* Pods-NativeBackground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeBackground.debug.xcconfig"; path = "Target Support Files/Pods-NativeBackground/Pods-NativeBackground.debug.xcconfig"; sourceTree = "<group>"; };
+		E2DCC415CEC0FA184CF0B160 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = NativeBackground/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				31CAA02F2BBDAFEA00637233 /* NativeBackground-Bridging-Header.h */,
+				E2DCC415CEC0FA184CF0B160 /* PrivacyInfo.xcprivacy */,
 			);
 			name = NativeBackground;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				17DDD2F86A7A354263C0F616 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

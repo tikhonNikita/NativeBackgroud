@@ -6,22 +6,23 @@ import {Image, StyleSheet, View} from 'react-native';
 //TODO: fix issue with changing blurAmount breaks default styles
 //TODO: unify interface
 const image = require('./res/images/city.jpg');
-const color = 'rgba(12,21,4,0.0)';
+const color = 'rgba(12,21,4,0.1)';
 function App(): React.JSX.Element {
   return (
     <View style={styles.backgroundStyle}>
+      <Image
+        source={image}
+        style={{
+          flex: 1,
+        }}
+      />
       <NeuHintergrund
+        style={StyleSheet.absoluteFill}
         enabled={true}
         blurType="dark"
         color={color}
-        blurRadius={20}>
-        <Image
-          source={image}
-          style={{
-            flex: 1,
-          }}
-        />
-      </NeuHintergrund>
+        blurRadius={20}
+      />
     </View>
   );
 }
